@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: rgb(223, 221, 211); /* Light background for better contrast */
   margin: 0;
   padding: 0;
 }
@@ -39,9 +39,15 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: #3289a8; /* Blue color for better contrast */
   text-decoration: none;
   font-size: 1.25rem;
+}
+
+.main-nav ul li a:focus,
+.main-nav ul li a:hover {
+  background-color: #232f96; /* Darker blue background on focus/hover */
+  color: white;
 }
 
 form input,
@@ -50,6 +56,15 @@ form textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
+  border: 1px solid #9193a3;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #4aa0b5;
+  outline: 0;
+  box-shadow: 0 0 0 0.3rem rgba(26, 126, 233, 0.25);
+
 }
 
 form textarea {
@@ -60,12 +75,34 @@ form textarea {
 }
 
 form button {
-  background: none;
-  border: 2px solid black;
+  background: #2173cb;
+  border: none;
   padding: 1rem;
   text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover,
+form button:focus {
+  background: #07478b;
+  outline: none;
 }
 
 .site-footer {
   padding: 2rem 0;
+  text-align: center;
+  background-color: #343a40;
+  color: white;
+}
+
+.skip-link{
+  text-decoration: none;
+  color: black;
+  text-align: right;
+  margin: .5rem;
+}
+
+.skip-link:hover{
+  color: black;
 }
